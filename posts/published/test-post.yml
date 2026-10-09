@@ -1,0 +1,10 @@
+account: huzza
+type: image
+publish_at: 2026-10-09 00:00
+caption: Test post, please ignore.
+media:
+- media/huzza-example.jpg
+result:
+  media_id: '18020810972864946'
+  permalink: https://www.instagram.com/p/DeRZPl7m_Hq/
+  published_at: '2026-10-09T11:24:28+00:00'
