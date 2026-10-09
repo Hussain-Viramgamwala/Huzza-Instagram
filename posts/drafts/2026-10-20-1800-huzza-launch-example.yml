@@ -1,0 +1,21 @@
+# EXAMPLE POST: drafts are never published.
+# To approve it, move this file into posts/queue/.
+
+account: huzza
+type: image                     # image | carousel | reel | story
+publish_at: 2026-10-20 18:00    # UAE time
+
+caption: |
+  Huzza is live. 🚀
+  Real work experience with UAE companies, for students aged 15–17, during the school holidays.
+  Free for students. Link in bio to sign up.
+
+  #Huzza #UAEstudents #workexperience #internshipsUAE
+
+alt_text: Huzza logo with the line "Real work experience. Free for students."   # optional, images only
+
+media:
+  - media/huzza-example.jpg     # a file in this repo, or a full https:// link
+
+# Carousel: type: carousel, then 2–10 items under media.
+# Reel: type: reel, one .mp4 under media. Optional: share_to_feed: false

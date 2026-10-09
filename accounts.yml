@@ -1,0 +1,8 @@
+# The Instagram account this bot posts to. `huzza` is what you write as
+# `account:` in a post file. token_secret is the GitHub secret holding the
+# account's Instagram access token (Settings → Secrets and variables → Actions).
+# Times in post files are read as UAE time unless a post says otherwise.
+accounts:
+  huzza:
+    token_secret: IG_TOKEN_HUZZA
+    timezone: Asia/Dubai
