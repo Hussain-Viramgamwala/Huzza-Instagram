@@ -42,7 +42,7 @@ jobs:
       - name: Publish due posts
         if: steps.queue.outputs.has_posts == 'true'
         env:
-          SECRETS_JSON: ${{ toJSON(secrets) }}
+             IG_TOKEN_HUZZA: ${{ secrets.IG_TOKEN_HUZZA }}
         run: |
           git config user.name  "instagram-bot"
           git config user.email "instagram-bot@users.noreply.github.com"
