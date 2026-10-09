@@ -2,6 +2,7 @@ name: Refresh Instagram tokens
 
 on:
   schedule:
+    # Mondays 06:13 UTC. Tokens last 60 days, so weekly keeps a wide margin.
     - cron: "13 6 * * 1"
   workflow_dispatch:
 
@@ -19,6 +20,6 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Refresh and save tokens
         env:
-          SECRETS_JSON: ${{ toJSON(secrets) }}
+          IG_TOKEN_HUZZA: ${{ secrets.IG_TOKEN_HUZZA }}
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: python scripts/refresh_tokens.py

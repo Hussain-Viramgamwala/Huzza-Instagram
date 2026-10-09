@@ -1,0 +1,19 @@
+name: Check post files
+
+on:
+  push:
+    paths: ["posts/queue/**", "posts/drafts/**", "accounts.yml"]
+  pull_request:
+    paths: ["posts/**"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Validate queued posts
+        run: python scripts/publish.py --dry-run --now "2000-01-01 00:00"

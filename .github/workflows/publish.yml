@@ -2,6 +2,7 @@ name: Publish to Instagram
 
 on:
   schedule:
+    # Every 15 minutes. GitHub may run these a few minutes late at busy times.
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
@@ -42,7 +43,7 @@ jobs:
       - name: Publish due posts
         if: steps.queue.outputs.has_posts == 'true'
         env:
-             IG_TOKEN_HUZZA: ${{ secrets.IG_TOKEN_HUZZA }}
+          IG_TOKEN_HUZZA: ${{ secrets.IG_TOKEN_HUZZA }}
         run: |
           git config user.name  "instagram-bot"
           git config user.email "instagram-bot@users.noreply.github.com"
